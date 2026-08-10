@@ -1,5 +1,5 @@
 <?php
-use App\http\Controllers\Page\MainController;
+use App\http\Controllers\Pages\MainController;
 use Illuminate\Support\Facades\Route;
 
 Route::inertia('/', 'welcome')->name('home');

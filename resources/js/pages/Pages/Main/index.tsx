@@ -7,10 +7,15 @@ export default function Welcome() {
 
     return (
         <>
-         <div><span>siupsiup</span></div>
-         <div><span>siupsiup</span></div>
-         <div><span>siupsiup</span></div>
-
+            <div>
+                <span>siupsiup</span>
+            </div>
+            <div>
+                <span>siupsiup</span>
+            </div>
+            <div>
+                <span>siupsiup</span>
+            </div>
         </>
     );
 }
