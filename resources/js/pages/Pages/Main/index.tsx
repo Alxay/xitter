@@ -186,7 +186,7 @@ export default function Welcome() {
                             </div>
                         </div>
                         <div className="mt-4" style={{ fontFamily: 'Papyrus' }}>
-                            <p>posts will be here...</p>
+                            <p>Posts will be shown here...</p>
                         </div>
                     </div>
                 </div>
