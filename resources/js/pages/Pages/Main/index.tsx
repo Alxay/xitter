@@ -18,9 +18,26 @@ import {
 } from 'lucide-react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+interface Profile {
+    name: string;
+    username: string;
+    posts: number;
+    bio: string;
+    location: string;
+    joined: string;
+    following: number;
+    followers: number;
+    banner: string;
+    avatar: string;
+}
+
+interface MainPageProps {
+    profile: Profile;
+}
+
 export default function Welcome() {
     const { auth } = usePage().props;
-
+    const { profile } = usePage<MainPageProps>().props;
     return (
         <>
             <div
@@ -120,29 +137,29 @@ export default function Welcome() {
                     </div>
                     <div className="col-6 py-4" style={{ color: '#A3B18A' }}>
                         <div className="border-bottom p-3">
-                            <div className="d-flex gap-3">
-                                <div
+                            <span
+                                className="mb-3 ml-18"
+                                style={{
+                                    color: '#A3B18A',
+                                    fontFamily: 'Arial',
+                                }}
+                            >
+                                @{profile.username}
+                            </span>
+                            <div className="d-flex align-items-center gap-3">
+                                <img
+                                    src={profile.avatar}
+                                    alt="avatar"
                                     style={{
                                         width: '55px',
-                                        height: '48px',
+                                        height: '55px',
                                         borderRadius: '50%',
-                                        backgroundColor: '#838282',
                                     }}
-                                >
-                                    <span
-                                        className="mb-3 ml-18"
-                                        style={{
-                                            color: '#A3B18A',
-                                            fontFamily: 'Arial',
-                                        }}
-                                    >
-                                        @Alxay7
-                                    </span>
-                                </div>
+                                />
 
                                 <input
                                     type="text"
-                                    className="form-control fs-5 mt-4 border-0"
+                                    className="form-control fs-5 border-0"
                                     placeholder="What's up?"
                                     style={{
                                         backgroundColor: '#838282',
@@ -169,22 +186,22 @@ export default function Welcome() {
                             <p>posts will be here...</p>
                         </div>
                     </div>
+                </div>
 
-                    <div className="border-start bo col-3">
-                        <div className="border-bottom p-3">
-                            <input
-                                style={{
-                                    backgroundColor: '#838282',
-                                    borderRadius: '20px',
-                                    height: '48px',
-                                    boxShadow: 'none',
-                                    fontFamily: 'Papyrus',
-                                }}
-                                type="text"
-                                placeholder="Search..."
-                                className="form-control"
-                            />
-                        </div>
+                <div className="border-start bo col-3">
+                    <div className="border-bottom p-3">
+                        <input
+                            style={{
+                                backgroundColor: '#838282',
+                                borderRadius: '20px',
+                                height: '48px',
+                                boxShadow: 'none',
+                                fontFamily: 'Papyrus',
+                            }}
+                            type="text"
+                            placeholder="Search..."
+                            className="form-control"
+                        />
                     </div>
                 </div>
             </div>
