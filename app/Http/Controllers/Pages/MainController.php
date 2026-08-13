@@ -10,8 +10,11 @@ class MainController extends Controller
 {
     public function index()
     {
-
         return inertia('Pages/Main/index');
+    }
+    public function userProfile(Request $request)
+    {
+        return inertia('Pages/Profile/index');
     }
 
 }
