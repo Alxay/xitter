@@ -135,7 +135,10 @@ export default function Welcome() {
                             </button>
                         </div>
                     </div>
-                    <div className="col-6 py-4" style={{ color: '#A3B18A' }}>
+                    <div
+                        className="border-end col-6 py-4"
+                        style={{ color: '#A3B18A' }}
+                    >
                         <div className="border-bottom p-3">
                             <span
                                 className="mb-3 ml-18"
@@ -189,7 +192,10 @@ export default function Welcome() {
                 </div>
 
                 <div className="border-start bo col-3">
-                    <div className="border-bottom p-3">
+                    <div
+                        className="border-bottom w-[18%] p-3"
+                        style={{ position: 'absolute', top: 80, right: 199 }}
+                    >
                         <input
                             style={{
                                 backgroundColor: '#838282',
