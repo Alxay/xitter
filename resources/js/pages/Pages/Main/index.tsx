@@ -186,7 +186,68 @@ export default function Welcome() {
                             </div>
                         </div>
                         <div className="mt-4" style={{ fontFamily: 'Papyrus' }}>
-                            <p>Posts will be shown here...</p>
+                            <div
+                                className="border-bottom mt-4 p-3"
+                                style={{
+                                    backgroundColor: '#2A2A2A',
+                                    borderRadius: '15px',
+                                    color: '#A3B18A',
+                                    fontFamily: 'Papyrus',
+                                }}
+                            >
+                                <div className="d-flex align-items-center gap-3">
+                                    <img
+                                        src={profile.avatar}
+                                        alt="avatar"
+                                        style={{
+                                            width: '45px',
+                                            height: '45px',
+                                            borderRadius: '50%',
+                                        }}
+                                    />
+
+                                    <div>
+                                        <span
+                                            style={{
+                                                fontSize: '18px',
+                                                fontWeight: 'bold',
+                                            }}
+                                        >
+                                            @{profile.username}
+                                        </span>
+                                        <p
+                                            style={{
+                                                margin: 0,
+                                                fontSize: '14px',
+                                                opacity: 0.7,
+                                            }}
+                                        >
+                                            2 hours ago
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div
+                                    style={{
+                                        marginTop: '12px',
+                                        fontSize: '17px',
+                                    }}
+                                >
+                                    Example Post
+                                </div>
+
+                                <div className="d-flex mt-3 gap-4">
+                                    <button className="rounded-md p-2 hover:bg-[#838282]">
+                                        <Star size={20} color="beige" />
+                                    </button>
+                                    <button className="rounded-md p-2 hover:bg-[#838282]">
+                                        <Smile size={20} color="beige" />
+                                    </button>
+                                    <button className="rounded-md p-2 hover:bg-[#838282]">
+                                        <Send size={20} color="beige" />
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
